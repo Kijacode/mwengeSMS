@@ -5,10 +5,10 @@ var btoa = require("btoa");
 
 async function bongoSendSms(phonenumber,message){
 
-  const api_key = process.env.SECRET_KEY || "648c1311fdad9501";
-  const secret_key = process.env.SECRET_KEY || "ZTNjMDdlZDAxYTVhZjEyNTk0ZWZlZTZjZWI0ZDQyYjdlYTc1MDQ0YmYxZGZjNmRjNzIxM2M5ZWJlODcxNmI1MA==";
+  const api_key = "648c1311fdad9501";
+  const secret_key = "ZTNjMDdlZDAxYTVhZjEyNTk0ZWZlZTZjZWI0ZDQyYjdlYTc1MDQ0YmYxZGZjNmRjNzIxM2M5ZWJlODcxNmI1MA==";
   const content_type = "application/json";
-  const source_addr = process.env.ADDRESS || "MWENGE_SDA";
+  const source_addr = "MWENGE_SDA";
 
   axios
   .post(
