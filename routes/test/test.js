@@ -14,7 +14,14 @@ router.get("/send/mwenge/:number/:message",async (req,res) =>{
    try {
       console.log("start");
       await BongLive_2(phoneNumber,message).then(() =>{
-         res.redirect("https://uqweli.website/")
+         if(res.statusCode == 200)
+         {
+            res.redirect("https://uqweli.website/")
+         }
+         else{
+            return console.log("status code is not okay")
+         }
+        
       });
    } catch (error) {
      return console.log(error);
