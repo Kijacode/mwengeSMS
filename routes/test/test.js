@@ -17,7 +17,7 @@ router.get("/send/mwenge/:number/:message/:url",async (req,res) =>{
       await BongLive_2(phoneNumber,message).then(() =>{
          if(res.statusCode == 200)
          {
-          return  res.redirect(url)
+          return  res.redirect("https://www.bongolive.co.tz/api/docs/index.html#api-_");
          }
          else{
             return console.log("status code is not okay")
