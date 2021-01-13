@@ -1,12 +1,12 @@
-const http = require("http");
-const app = require("../app");
+const http = require('http');
+const app = require('../app');
 
-app.set("port", process.env.PORT || 7000);
+app.set('port', process.env.PORT || 7000);
 
 const server = http.createServer(app);
 
-server.on("listening", function() {
-    console.log("ok, server is running at "+process.PORT);
+server.on('listening', function () {
+  console.log('ok, server is running at ' + process.PORT); // FIXME: port
 });
 
 server.listen(process.env.PORT || 7000);
