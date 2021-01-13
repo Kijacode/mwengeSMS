@@ -1,18 +1,15 @@
 {
-  "name": "test",
+  "name": "mwengesms",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "MwengeSMS",
   "scripts": {
+    "start": "node ./server/www.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kijacode",
   "license": "ISC",
   "dependencies": {
-    "africastalking": "^0.4.5",
     "axios": "^0.21.1",
-    "body-parser": "^1.19.0",
-    "btoa": "^1.2.1",
     "express": "^4.17.1"
   }
 }
