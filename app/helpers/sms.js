@@ -1,15 +1,17 @@
-const axios = require("axios");
-const https = require("https");
+const axios = require('axios');
+const https = require('https');
+
+const {
+  MWENGE_SDA = 'MWENGE_SDA',
+  API_KEY = '',
+  SECRET_KEY = '',
+} = process.env;
 
 function bongoSendSms(phoneNumber, message) {
   return new Promise((resolve, reject) => {
-    const sourceAddr = process.env.MWENGE_SDA || "MWENGE_SDA";
-    const apiKey = process.env.API_KEY || "";
-    const secretKey = process.env.SECRET_KEY || "";
-
     const data = {
-      source_addr: sourceAddr,
-      schedule_time: "",
+      source_addr: MWENGE_SDA,
+      schedule_time: '',
       encoding: 0,
       message: message,
       recipients: [
@@ -21,12 +23,12 @@ function bongoSendSms(phoneNumber, message) {
     };
 
     axios
-      .post("https://apisms.bongolive.africa/v1/send", data, {
+      .post('https://apisms.bongolive.africa/v1/send', data, {
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
           Authorization: `Basic ${Buffer.from(
-            apiKey + ":" + secretKey
-          ).toString("base64")}`,
+            API_KEY + ':' + SECRET_KEY
+          ).toString('base64')}`,
         },
         httpsAgent: new https.Agent({
           rejectUnauthorized: false,
