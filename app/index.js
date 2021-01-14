@@ -1,10 +1,10 @@
-const express = require("express");
-const apiRoutes = require("./routes/api");
+const express = require('express')
+const apiRoutes = require('./routes/api')
 
-const app = express();
+const app = express()
 
-app.use(express.json());
+app.use(express.json())
 
-app.use("/sms", apiRoutes);
+app.use('/sms', apiRoutes)
 
-module.exports = app;
+module.exports = app
