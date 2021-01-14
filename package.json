@@ -6,7 +6,7 @@
     "start": "node ./server/www.js",
     "lint": "eslint \"**/*.js\"",
     "lint:fix": "prettier-eslint --write \"$PWD/**/*.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "Kijacode",
   "license": "ISC",
@@ -15,6 +15,9 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "jest": "^26.6.3",
+    "superagent": "^6.1.0",
+    "supertest": "^6.0.1",
     "eslint": "^7.17.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
